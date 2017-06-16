@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1094489888326",
+    "project_id": "firebase-planezy"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094489888326:android:33104dcef3c557da",
+        "android_client_info": {
+          "package_name": "com.developer.gavinejoyce.wedding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094489888326-ffk39816vefj793lco5tj0qjki4kgoht.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1094489888326-qucpcr8e30g423f2fvuaqd0pkf1h4rsl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.developer.gavinejoyce.wedding",
+            "certificate_hash": "164099811390d9f853ee8f5534d1e0504ccd81a5"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlOODLOANK_brOB-AHZ7edQeiUrQh2jpg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
