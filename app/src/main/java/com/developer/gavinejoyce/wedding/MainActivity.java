@@ -240,7 +240,6 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
     {
         if(sigIn)
         {
-            Toast.makeText(getApplicationContext(),"SignIn Success",Toast.LENGTH_LONG).show();
             //GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             GoogleSignInAccount acct = result.getSignInAccount();
             String personName = acct.getDisplayName();
@@ -248,12 +247,23 @@ public class MainActivity extends FragmentActivity implements GoogleApiClient.On
             String personFamilyName = acct.getFamilyName();
             String personEmail = acct.getEmail();
             String personId = acct.getId();
-            Uri personPhoto = acct.getPhotoUrl();
-            Intent in = new Intent(MainActivity.this,ImageLisiting.class);
-            Bundle b1 = new Bundle();
-            b1.putString("UserName",personName);
-            in.putExtras(b1);
-            startActivity(in);
+            Uri personPhoto=null;
+            Intent in = new Intent(MainActivity.this, ImageListing.class);
+            try {
+                personPhoto = acct.getPhotoUrl();
+                in.putExtra("UserPhoto", personPhoto.toString());
+            }catch(NullPointerException e)
+            {
+                e.printStackTrace();
+            }
+                Toast.makeText(getApplicationContext(), "Welcome " + personName, Toast.LENGTH_LONG).show();
+
+                Bundle b1 = new Bundle();
+                b1.putString("UserName", personName);
+
+                in.putExtras(b1);
+                startActivity(in);
+
         }
         else
         {

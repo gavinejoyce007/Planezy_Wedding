@@ -123,7 +123,7 @@ public class SignupActivity extends AppCompatActivity {
 
     public void SignupSubmission(View view){
         if (validateEmailAddress() && validateUserName() && validatePhone()) {
-            Intent intent = new Intent(this, ImageLisiting.class);
+            Intent intent = new Intent(this, ImageListing.class);
             startActivity(intent);
         }
 

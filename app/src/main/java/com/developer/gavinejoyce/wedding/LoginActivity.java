@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText useremailid = (EditText) findViewById(R.id.emailid);
         if (validateEmailAddress(useremailid.getText().toString().trim())) {
 
-            Intent intent = new Intent(this, ImageLisiting.class);
+            Intent intent = new Intent(this, ImageListing.class);
             startActivity(intent);
         } else {
             useremailid.requestFocus();
